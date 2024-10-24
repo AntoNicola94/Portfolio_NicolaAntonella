@@ -1,0 +1,385 @@
+@charset "utf-8";
+body {
+    background: rgb(180, 174, 191);
+background: linear-gradient(35deg, rgb(170, 150, 197) 0%, rgb(205, 194, 228) 19%, rgba(255,255,255,1) 36%, rgba(239,239,238,1) 53%, rgba(229,227,237,1) 82%, rgba(208,192,241,1) 100%);
+}
+/*NAV BAR*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+.header .logo{
+    cursor: pointer;
+}
+.header .logo img{
+    height: 100px;
+    width: auto;
+    transition: all 0.3s;
+}
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+
+.botonera {
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.nav-links li a {
+    text-decoration: none;
+    font-size: 12pt;
+    background-color: #fff;
+    padding: 10px 60px;
+    border-radius: 40px;
+    transition: transform 0.5s ease;
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+}
+.nav-links li a:hover {
+    transform: scale(1);
+    font-weight: bolder;
+    color: white;
+    background-color: #b298d3;
+}
+nav ul li {
+    display: inline;
+    padding: 20px;
+}
+
+/*FIN NAV BAR*/
+/*BOTON FLOTANTE*/
+.BotonFlotante {
+    position: fixed;
+    top: 400px;
+    left: 0px;  
+    background-color: #d0c0f1;
+    padding: 10px;
+    opacity: 15;
+    border-radius: 40px;
+    border: 1px solid rgb(132, 17, 209);
+}
+/*FIN BOTON FLOTANTE*/
+/*Inicio de main*/
+h1{
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    color: #f8f8f8;
+    text-align: center;
+    background-color: #7548948a;
+    padding: 20px 20px;
+    border-radius: 40px;
+    margin: 40px;
+    display: flex; 
+}
+.soyanto p {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    color: #764894;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px 20px;
+    border-radius: 40px;
+    margin: 40px;
+    display: flex; 
+}
+.soyanto {
+    background-image: url(img/imagenantonicola.jpg);
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.sobremi {
+    font-size: 20px;
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    color: #f8f8f8;
+    text-align: center;
+    background-color: #7548948a;
+    padding: 20px 20px;
+    border-radius: 40px;
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    font-family: "Signika Negative", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+.aboutme,.formacion, .cursos {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.aboutme h2 {
+    font-size: 20px;
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    color: #f8f8f8;
+    text-align: center;
+    background-color: #764894;
+    padding: 20px 20px;
+    border-radius: 40px;
+    margin: 70px;
+    display: flex;
+    align-items: center;
+}
+.listasaboutme {
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    color: #764894;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px 20px;
+    border-radius: 40px;
+    margin: 50px;
+    display: flex; 
+    flex-direction: column;
+    border: 1px solid rgb(132, 17, 209);
+    box-shadow: 0 0 5px #8246e969;
+    width: 38%;
+    gap: 10px;
+}
+.listasaboutme h3 {
+    font-size: 25px;
+}
+.listasaboutme a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #764894
+}
+.listasaboutme a:hover{
+    background-color:#cab2e958;
+    border-radius: 40px;
+}
+.laquitiempo{
+    font-size: 17px;
+    font-weight: 500;
+}
+.listlaqui{
+    font-size: 13px;
+    padding: 10px;
+    font-weight: 500;
+}
+.tateti {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    color: #764894;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px 20px;
+    border-radius: 40px;
+    margin: 50px;
+    display: flex; 
+    flex-direction: column;
+    border: 1px solid rgb(132, 17, 209);
+    box-shadow: 0 0 5px #8246e969;
+    width: 38%;
+    gap: 10px;
+}
+.tateti h3{
+    font-size: 25px;
+}
+.tateti a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #764894
+}
+.tatetitiempo{
+    font-size: 17px;
+    font-weight: 500;
+}
+.listastateti {
+    font-size: 13px;
+    padding: 10px;
+    font-weight: 500;
+}
+.tateti a:hover{
+    background-color:#cab2e958;
+    border-radius: 40px;
+}
+.formacion h2 {
+    font-size: 20px;
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    color: #f8f8f8;
+    text-align: center;
+    background-color: #764894;
+    padding: 60px ;
+    border-radius: 40px;
+    margin: 70px;
+    display: flex;
+    align-items: center;
+}
+.diseñoycom,.tea {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    color: #764894;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px 20px;
+    border-radius: 40px;
+    margin: 50px;
+    display: flex; 
+    flex-direction: column;
+    border: 1px solid rgb(132, 17, 209);
+    box-shadow: 0 0 5px #8246e969;
+    width: 38%;
+    gap: 10px;
+}
+.diseñoycom h3 {
+    font-size: 25px;
+}
+.diseñoycom h5{
+    font-size: 17px;
+}
+.diseñoycom p{
+    font-size: 17px;
+    padding: 10px;  
+    font-weight: 500;
+}
+.tea h3 {
+    font-size: 25px;
+}
+.tea h5{
+    font-size: 17px;
+}
+.tea p{
+    font-size: 17px;
+    padding: 10px; 
+    font-weight: 500; 
+}
+.cursos h2{
+    font-size: 20px;
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    color: #f8f8f8;
+    text-align: center;
+    background-color: #764894;
+    padding: 60px ;
+    border-radius: 40px;
+    margin: 70px;
+    display: flex;
+    align-items: center;
+}
+.desarrollo, .diseñoutn, .uxui {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    color: #764894;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 40px;
+    margin: 40px;
+    display: flex; 
+    flex-direction: column;
+    border: 1px solid rgb(132, 17, 209);
+    box-shadow: 0 0 5px #8246e969;
+    width: 38%;
+    gap: 10px;
+}
+.cursos h3{
+    font-size: 25px;
+}
+.cursos h5{
+    font-size: 17px;
+}
+.cursos p{
+    font-size: 17px;
+    font-weight: 500;
+}
+.habilidades {
+    display: flex;
+    padding-bottom: 50px;
+    margin: 25px;
+}
+.habilidades h2 {
+    font-size: 20px;
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    color: #f8f8f8;
+    text-align: center;
+    background-color: #764894;
+    padding: 40px ;
+    border-radius: 40px;
+    margin: 40px 70px;
+    display: flex;
+    align-items: center;
+}
+.habilidadeslista {
+    margin: 40px 70px;
+    align-content: center;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 40px;
+    border: 1px solid rgb(132, 17, 209);
+    box-shadow: 0 0 5px #8246e969;
+}
+.proyectos {
+    display: flex;
+    padding-bottom: 30px;
+    margin: 25px;
+}
+.proyectos h2 {
+    font-size: 20px;
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    color: #f8f8f8;
+    text-align: center;
+    background-color: #764894;
+    padding: 40px ;
+    border-radius: 40px;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+}
+.proyectos img {
+    margin: 20px;
+    align-content: center;
+    cursor: pointer;
+    padding: 50px;
+    background-color: #ece8f3;
+    border-radius: 40px;
+}
+.proyectos img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px #8246e969;
+    border-radius: 40px;
+    filter: opacity(.6);
+}
+/*Fin de main*/
+/*Inicio de footer*/
+footer {
+    background-color: #9882ba6b;
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+    padding: 40px 30px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    align-content: stretch;
+    flex-direction: column;
+}
+footer p {
+    border: 1px solid rgb(132, 17, 209);
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 10px;
+}
+.logoscontacto a:hover{
+    filter: opacity(.6);
+}
+/*Fin de footer*/
+
+
