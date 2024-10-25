@@ -401,9 +401,6 @@ h2 {
 /*Fin de main SOBRE MI*/
 /*Inicio de SLIDER INFINITO*/
 .slider{
-    width: 100vw;
-    height: auto;
-    margin: auto;
     overflow: hidden;
 }
 .slider .slide-track{
