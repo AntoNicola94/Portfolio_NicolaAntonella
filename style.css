@@ -51,6 +51,38 @@ nav ul li {
     padding: 20px;
 }
 /*FIN NAV BAR*/
+/*MEDIA QUERY PARA NAV BAR*/
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 5%;
+        height: auto; /* Ajusta la altura para evitar overflow */
+    }
+
+    .header .logo img {
+        height: 60px; 
+    }
+
+    .botonera {
+        padding: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        display: block; /* Cambia a bloques verticales*/
+        padding: 10px 0;
+    }
+
+    .nav-links li a {
+        font-size: 10pt;
+        padding: 8px 20px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /*BOTON FLOTANTE*/
 .BotonFlotante {
     position: fixed;
@@ -64,50 +96,60 @@ nav ul li {
 }
 /*FIN BOTON FLOTANTE*/
 /*Inicio de main SOBRE MI*/
-h1{
-    font-family: "DM Mono", monospace;
-    font-weight: 400;
-    color: #f8f8f8;
-    text-align: center;
-    background-color: #7548948a;
-    padding: 20px 20px;
-    border-radius: 40px;
-    margin: 40px;
-    display: flex; 
+#sobremi {
+	width: 100%;
+	height: 78vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.soyanto p {
-    font-family: "DM Mono", monospace;
-    font-weight: 400;
-    color: #764894;
-    text-align: center;
-    background-color: #f8f8f8;
-    padding: 20px 20px;
-    border-radius: 40px;
-    margin: 40px;
-    display: flex; 
-}
-.soyanto {
-    background-image: url(img/imagenantonicola.jpg);
-    height: 100vh;
+#contenido-cover {
+	width: 912px;
     display: flex;
-    background-size: cover;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
+	justify-content: space-between;
+	align-items: center;
+    flex-direction: row-reverse;
+	border-radius: 40px;
+	padding: 24px;
+	gap: 48px;
+    background-color: #764894;
 }
-.sobremi {
-    font-size: 20px;
+.contenido-img {
+	border-radius: 16px;
+}
+#cover-article {
+	display: flex;
+	flex-direction: column;
+    padding: 40px;
     font-family: "DM Mono", monospace;
     font-weight: 500;
-    color: #f8f8f8;
-    text-align: center;
-    background-color: #7548948a;
-    padding: 20px 20px;
-    border-radius: 40px;
-    margin: 60px;
-    display: flex;
-    flex-direction: column;
+    font-style: normal;
+    color: white;
+}
+#cover-article .hola{
+    font-size: 40px;
+}
+/*MEDIA QUERY*/
+@media (max-width: 600px) {
+	#contenido-cover {
+		width: 100%;
+		flex-direction: column; 
+		padding: 16px;
+		gap: 16px;
+	}
+
+	#cover-article {
+		padding: 20px;
+	}
+
+	#cover-article .hola {
+		font-size: 24px; 
+	}
+
+	.contenido-img {
+		width: 100%;
+		border-radius: 16px;
+	}
 }
 h2 {
     font-family: "Signika Negative", sans-serif;
@@ -323,38 +365,6 @@ h2 {
     border-radius: 40px;
     border: 1px solid rgb(132, 17, 209);
     box-shadow: 0 0 5px #8246e969;
-}
-.proyectos {
-    display: flex;
-    padding-bottom: 30px;
-    margin: 25px;
-}
-.proyectos h2 {
-    font-size: 20px;
-    font-family: "DM Mono", monospace;
-    font-weight: 500;
-    color: #f8f8f8;
-    text-align: center;
-    background-color: #764894;
-    padding: 40px ;
-    border-radius: 40px;
-    margin: 40px;
-    display: flex;
-    align-items: center;
-}
-.proyectos img {
-    margin: 20px;
-    align-content: center;
-    cursor: pointer;
-    padding: 50px;
-    background-color: #ece8f3;
-    border-radius: 40px;
-}
-.proyectos img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 5px #8246e969;
-    border-radius: 40px;
-    filter: opacity(.6);
 }
 /*Fin de main SOBRE MI*/
 /*Inicio de SLIDER INFINITO*/
