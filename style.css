@@ -57,7 +57,7 @@ nav ul li {
         flex-direction: column;
         align-items: center;
         padding: 10px 5%;
-        height: auto; /* Ajusta la altura para evitar overflow */
+        height: auto; /* Ajusta ALTURA*/
     }
 
     .header .logo img {
@@ -71,7 +71,7 @@ nav ul li {
     }
 
     .nav-links li {
-        display: block; /* Cambia a bloques verticales*/
+        display: block;
         padding: 10px 0;
     }
 
