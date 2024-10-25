@@ -71,7 +71,7 @@ nav ul li {
     }
 
     .nav-links li {
-        display: block;
+        display: block; /* Cambia a bloques verticales*/
         padding: 10px 0;
     }
 
@@ -82,7 +82,6 @@ nav ul li {
         text-align: center;
     }
 }
-
 /*BOTON FLOTANTE*/
 .BotonFlotante {
     position: fixed;
@@ -95,6 +94,39 @@ nav ul li {
     border: 1px solid rgb(132, 17, 209);
 }
 /*FIN BOTON FLOTANTE*/
+/*INICIO ANIMACION AFTER DELAY SALUDO*/
+.afterdelay {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    padding: 200px;
+    margin: 100px;
+}
+.afterdelay div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.afterdelay .div1 {
+    animation: fade 12s infinite;
+}
+.afterdelay .div2 {
+    animation: fade 12s infinite;
+    animation-delay: 4s; /* Empieza después de la primera imagen */
+}
+.afterdelay .div3 {
+    animation: fade 12s infinite;
+    animation-delay: 8s; /* Empieza después de la segunda imagen */
+}
+@keyframes fade {
+    0%, 33.33%, 100% { opacity: 0; }
+    8.33%, 25% { opacity: 1; }
+}
+/*FIN ANIMACION AFTER DELAY SALUDO*/
 /*Inicio de main SOBRE MI*/
 #sobremi {
 	width: 100%;
