@@ -50,7 +50,6 @@ nav ul li {
     display: inline;
     padding: 20px;
 }
-
 /*FIN NAV BAR*/
 /*BOTON FLOTANTE*/
 .BotonFlotante {
@@ -64,7 +63,7 @@ nav ul li {
     border: 1px solid rgb(132, 17, 209);
 }
 /*FIN BOTON FLOTANTE*/
-/*Inicio de main*/
+/*Inicio de main SOBRE MI*/
 h1{
     font-family: "DM Mono", monospace;
     font-weight: 400;
@@ -357,8 +356,143 @@ h2 {
     border-radius: 40px;
     filter: opacity(.6);
 }
-/*Fin de main*/
-/*Inicio de footer*/
+/*Fin de main SOBRE MI*/
+/*Inicio de SLIDER INFINITO*/
+.slider{
+    width: 100vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+.slider .slide-track{
+    display: flex;
+    animation: scroll 50s linear infinite;
+    width: calc(1000px * 14);
+    -webkit-animation: scroll 50s linear infinite;
+}
+.slider .slide{
+    width: 2000px;
+}
+.slider .slide img{
+    width: 100%;
+}
+@keyframes scroll{
+    0%{
+        transform: translate(0);
+        -webkit-transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-200px * 7));
+        -webkit-transform: translateX(calc(-200px * 7));
+    }
+}
+/*Fin de SLIDER INFINITO*/
+/*INICIO de FORMULARIO*/
+.contenedor-formulario {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    max-width: 100%;
+}
+.pregunta-formulario{
+    max-width: 40%;
+    z-index: 10;
+}
+.titulo-form{
+    font-family:"DM Mono", monospace;
+    font-size: 60px;
+    font-weight: 700;
+    color: #764894;
+    padding: 100px 20px 50px 100px;
+    margin-right: 20px;
+    max-width: 10%;
+}
+.h3-formulario{
+    font-family: "Signika Negative", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: #764894;
+    display: flex;
+    justify-content: flex-start;
+}
+.zona-formulario{
+    background-color: #d0c0f1;
+    padding: 25px 50px;
+    z-index: 30;
+    border-radius: 50px;
+}
+form{
+    display: flex;
+    flex-direction:column ;
+    background-color: #b298d3;
+    padding: 50px 60px 30px 60px;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+.items-formulario{
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    justify-content: space-between;
+}
+.columna-izq-form, .columna-der-form{
+    display: flex;
+    flex-direction:column ;
+}
+label{
+    font-family: "Signika Negative", sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: normal;
+    color:#601095 ;
+}
+input{
+    padding: 10px;
+    font-family:"Signika Negative", sans-serif ;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: normal;
+    border-radius: 15px;
+    margin: 5px 0px 30px 0px;
+    background-color: white;
+    width: 260px;
+}
+.mensaje-form{
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+    padding: 10px 0px 50px 10px;
+    margin: 5px 0px 20px 0px;
+    border: none;
+    font-family:"Signika Negative", sans-serif ;
+    font-size: 14px;
+    font-weight: 100;
+}
+.boton-enviar{
+    display: flex;
+    justify-content: center;
+}
+.submit{
+    font-family:"Signika Negative", sans-serif  ;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: normal;
+    color: white;
+    background-color:#601095;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 5px 25px 6px 25px;
+    width: 30%;
+}
+.submit:hover{
+    background-color: #8750d0;
+}
+/*FIN de FORMULARIO*/
+
+/*Inicio de FOOTER*/
 footer {
     background-color: #9882ba6b;
     font-family: "DM Mono", monospace;
@@ -380,6 +514,6 @@ footer p {
 .logoscontacto a:hover{
     filter: opacity(.6);
 }
-/*Fin de footer*/
+/*Fin de FOOTER*/
 
 
