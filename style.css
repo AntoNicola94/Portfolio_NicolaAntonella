@@ -67,9 +67,9 @@ nav ul li {
 /*INICIO ANIMACION AFTER DELAY SALUDO*/
 .afterdelay {
     position: relative;
-    height: 100px;
-    padding: 80px;
-    margin: 80px;
+    height: 70px;
+    padding: 50px;
+    margin: 10px 80px 10px 80px;
 }
 .afterdelay div {
     position: absolute;
@@ -96,12 +96,26 @@ nav ul li {
 }
 .texto-animacion {
     font-size: 15pt;
-    padding: 70px 20px;
+    padding: 80px 50px 20px 25px;
     margin: 92px;
     font-family: "DM Mono", monospace;
     font-weight: 400;
     color: #a76acf;
 }
+.estrellavioletasaludo{
+    display: flex;
+    justify-content: center;
+    animation: giroinfinito 20s linear infinite;
+}
+@keyframes giroinfinito {
+    from {
+        transform: rotate(1deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /*FIN ANIMACION AFTER DELAY SALUDO*/
 /*Inicio de main SOBRE MI*/
 #sobremi {
@@ -394,16 +408,30 @@ h2 {
     font-family:"DM Mono", monospace;
     font-size: 60px;
     font-weight: 700;
-    color: #764894;
-    padding: 100px 20px 50px 100px;
+    color: #9747FF;
+    padding: 8px 20px 50px 100px;
     margin-right: 20px;
     max-width: 10%;
+}
+.estrellavioleta{
+    padding: 10px;
+    margin: 60px;
+    width: 20%;
+    animation: giroinfinito 10s linear infinite;
+}
+@keyframes giroinfinito {
+    from {
+        transform: rotate(1deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 .h3-formulario{
     font-family: "Signika Negative", sans-serif;
     font-size: 40px;
     font-weight: 400;
-    color: #764894;
+    color: #9747FF;
     display: flex;
     justify-content: flex-start;
 }
@@ -412,11 +440,12 @@ h2 {
     padding: 25px 50px;
     z-index: 30;
     border-radius: 50px;
+    margin: 30px;
 }
 form{
     display: flex;
     flex-direction:column ;
-    background-color: #b298d3;
+    background-color: #b198d338;
     padding: 50px 60px 30px 60px;
     box-sizing: border-box;
     border-radius: 50px;
@@ -471,7 +500,7 @@ textarea{
     font-weight: 200;
     line-height: normal;
     color: white;
-    background-color:#601095;
+    background-color:#601095a3;
     display: flex;
     justify-content: center;
     cursor: pointer;
@@ -481,6 +510,14 @@ textarea{
 }
 .submit:hover{
     background-color: #8750d0;
+}
+.contactoform{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.contactoform img{
+    padding: 20px;
 }
 /*FIN de FORMULARIO*/
 
@@ -493,24 +530,25 @@ textarea{
 
 /*Inicio de FOOTER*/
 footer {
-    background-color: #9882ba6b;
+    background-color: #d0c0f19f;
     font-family: "DM Mono", monospace;
     font-weight: 500;
     font-style: normal;
-    padding: 40px 30px;
-    border-radius: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 135px;
+}
+.footerderecho{
     display: flex;
     align-items: center;
-    align-content: stretch;
-    flex-direction: column;
+    gap: 20px;
 }
 footer p {
-    border: 1px solid rgb(132, 17, 209);
-    border-radius: 10px;
     padding: 5px 20px;
     font-size: 10px;
 }
-.logoscontacto a:hover{
+.redessociales a:hover{
     filter: opacity(.6);
 }
 /*Fin de FOOTER*/
