@@ -45,13 +45,7 @@ nav ul li {
     padding: 20px;
 }
 /*FIN NAV BAR*/
-/*MEDIA QUERY PARA NAV BAR*/
-@media screen and (max-width: 600px){
-    .header {
-        max-width: 100%;
-        height: auto; /* Ajusta ALTURA*/
-    }
-}
+
 /*BOTON FLOTANTE*/
 .BotonFlotante {
     position: fixed;
@@ -520,9 +514,7 @@ textarea{
     padding: 20px;
 }
 /*FIN de FORMULARIO*/
-
-
-
+/*Inicio de grilla de PROYECTOS*/
 
 
 
@@ -554,3 +546,41 @@ footer p {
 /*Fin de FOOTER*/
 
 
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERY FORMULARIO*/
+
+@media screen and (max-width: 600px) {
+    .contenedor-formulario {
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px;
+    }
+    .titulo-form {
+        font-size: 30px; 
+        padding: 8px 10px; 
+        margin-right: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+    .items-formulario {
+        flex-direction: column; 
+        gap: 20px;
+    }
+    .pregunta-formulario, .zona-formulario, input, textarea, .submit {
+        width: 80%; 
+    }
+    .submit {
+        width: auto; 
+    }
+    .estrellavioleta {
+        flex-direction: center;
+    }
+}
