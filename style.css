@@ -713,3 +713,59 @@ footer p {
         margin: 0 15px;
     }
 }
+
+
+
+/*PROYECTOS*/
+
+.margen-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px
+}
+.item-p img {
+	border-radius: 40px;
+	height: auto;
+	object-fit: cover;
+    display: flex; 
+    flex-direction: column;
+    border: 1px solid rgb(132, 17, 209);
+    box-shadow: 0 0 5px #8246e969;
+}
+.item-p {
+	position: relative;
+	display: inline-block;
+	transition: transform 0.4s ease;
+    margin: 50px;
+}
+.item-p-detalle {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 12px 18px;
+	opacity: 0;
+	transition: transform 0.4s ease;
+}
+.item-p p, .item-p h6 {
+	padding: 9px 20px 6px;
+	border-radius: 20px;
+	width: fit-content;
+	margin: 10px;
+}
+.item-p p {
+	background-color: #601095;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+}
+.item-p h6 {
+	background: #601095;
+	color:#fff ;
+}
+.item-p:hover, .item-p:hover .item-p-detalle {
+	opacity: 1;
+	transform: scale(1.20);
+}
+
