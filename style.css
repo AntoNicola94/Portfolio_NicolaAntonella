@@ -99,7 +99,7 @@ nav ul li {
 .afterdelay {
     position: relative;
     height: 70px;
-    padding: 50px;
+    padding: 50px 0px 50px 0px;
     margin: 10px 80px 10px 80px;
 }
 .afterdelay div {
@@ -132,9 +132,11 @@ nav ul li {
     font-family: "DM Mono", monospace;
     color: #a76acf;
 }
-.estrellavioletasaludo{
+.estrelladiv{
     display: flex;
     justify-content: center;
+}
+.estrellavioletasaludo{
     animation: giroinfinito 20s linear infinite;
 }
 @keyframes giroinfinito {
@@ -151,6 +153,11 @@ nav ul li {
     .afterdelay {
         padding: 20px;
         margin: 10px 20px;
+    }
+    .afterdelay div img{
+        width: 80%;
+        margin: 10px;
+        padding: 10px;
     }
     .texto-animacion {
         font-size: 12pt;
@@ -445,7 +452,7 @@ h2 {
         padding: 20px;
     }
     .listasaboutme, .tateti, .diseñoycom, .tea, .desarrollo, .diseñoutn, .uxui {
-        width: 100%;
+        width: 98%;
         margin: 20px 0;
         padding: 16px;
     }
@@ -713,11 +720,7 @@ footer p {
         margin: 0 15px;
     }
 }
-
-
-
 /*PROYECTOS*/
-
 .margen-contenedor{
     display: flex;
     justify-content: center;
@@ -768,4 +771,17 @@ footer p {
 	opacity: 1;
 	transform: scale(1.20);
 }
-
+/*SPOTIFY*/
+.spotify{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin: 50px;
+}
+.spotify h2{
+    font-family:"DM Mono", monospace;
+    font-size: 40px;
+    color: #9747FF;
+    padding: 40px;
+}
