@@ -693,4 +693,24 @@ footer p {
     filter: opacity(.6);
 }
 /*Fin de FOOTER*/
-
+/*MEDIA QUERY FOOTER*/
+@media screen and (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px 20px;
+    }
+    .footerderecho {
+        flex-direction: column;
+        gap: 10px;
+    }
+    footer p {
+        font-size: 14px;
+        padding: 5px 0;
+        margin: 10px;
+    }
+    .redessociales a {
+        margin: 0 15px;
+    }
+}
