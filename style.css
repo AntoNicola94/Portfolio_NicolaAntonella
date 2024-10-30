@@ -1,4 +1,8 @@
 @charset "utf-8";
+*{
+    margin: 0%;
+    padding: 0%;
+}
 body {
     background: rgb(180, 174, 191);
     background: linear-gradient(35deg, rgb(170, 150, 197) 0%, rgb(205, 194, 228) 19%, rgba(255,255,255,1) 36%, rgba(239,239,238,1) 53%, rgba(229,227,237,1) 82%, rgba(208,192,241,1) 100%);
@@ -44,8 +48,41 @@ nav ul li {
     display: inline;
     padding: 20px;
 }
+#menu-toggle {
+    display: none;
+}
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+/*MEDIA QUERY PARA NAV BAR*/
+@media screen and (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        background-color: #d0c0f19f;
+    }
+    .menu-icon {
+        display: block;
+    }
+    #menu-toggle:checked + .menu-icon + nav .nav-links {
+        display: flex;
+    }
+    .nav-links li a {
+        display: block;
+        padding: 15px;
+        width: 100%;
+    }
+}
+/*FIN MEDIA QUERY NAV BAR*/
 /*FIN NAV BAR*/
-
 /*BOTON FLOTANTE*/
 .BotonFlotante {
     position: fixed;
@@ -93,7 +130,6 @@ nav ul li {
     padding: 80px 50px 20px 25px;
     margin: 92px;
     font-family: "DM Mono", monospace;
-    font-weight: 400;
     color: #a76acf;
 }
 .estrellavioletasaludo{
@@ -109,11 +145,26 @@ nav ul li {
         transform: rotate(360deg);
     }
 }
-
 /*FIN ANIMACION AFTER DELAY SALUDO*/
+/*MEDIA QUERY ANIMACION AFTER DELAY SALUDO*/
+@media screen and (max-width: 600px) {
+    .afterdelay {
+        padding: 20px;
+        margin: 10px 20px;
+    }
+    .texto-animacion {
+        font-size: 12pt;
+        padding: 40px 20px 10px;
+        margin: 40px;
+    }
+    .estrellavioletasaludo {
+        padding: 10px;
+        animation: giroinfinito 15s linear infinite;
+    }
+}
 /*Inicio de main SOBRE MI*/
 #sobremi {
-	height: 78vh;
+	height: 92vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -121,12 +172,10 @@ nav ul li {
 #contenido-cover {
 	width: 800px;
     display: flex;
-	justify-content: space-between;
 	align-items: center;
     flex-direction: row-reverse;
 	border-radius: 40px;
 	padding: 24px;
-	gap: 48px;
     background-color: #764894;
 }
 .contenido-img {
@@ -144,16 +193,17 @@ nav ul li {
 #cover-article .hola{
     font-size: 40px;
 }
+#cover-article p{
+    padding: 10px;
+}
 h2 {
     font-family: "Signika Negative", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
     font-style: normal;
 }
-.aboutme,.formacion, .cursos {
+.aboutme,.formacion, .cursos, .habilidades, .idiomas {
     display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
+    margin: 50px;
 }
 .aboutme h2 {
     font-size: 20px;
@@ -162,15 +212,14 @@ h2 {
     color: #f8f8f8;
     text-align: center;
     background-color: #764894;
-    padding: 20px 20px;
+    padding: 20px;
     border-radius: 40px;
-    margin: 70px;
+    margin: 20px;
     display: flex;
     align-items: center;
 }
 .listasaboutme {
     font-family: "DM Mono", monospace;
-    font-weight: 500;
     color: #764894;
     text-align: center;
     background-color: #f8f8f8;
@@ -202,12 +251,15 @@ h2 {
 }
 .listlaqui{
     font-size: 13px;
-    padding: 10px;
+    padding: 20px;
     font-weight: 500;
+    list-style: none;
+}
+.listlaqui li{
+    padding: 3px;
 }
 .tateti {
     font-family: "DM Mono", monospace;
-    font-weight: 400;
     color: #764894;
     text-align: center;
     background-color: #f8f8f8;
@@ -235,8 +287,12 @@ h2 {
 }
 .listastateti {
     font-size: 13px;
-    padding: 10px;
+    padding: 20px;
     font-weight: 500;
+    list-style: none;
+}
+.listastateti li{
+    padding: 3px;
 }
 .tateti a:hover{
     background-color:#cab2e958;
@@ -247,17 +303,15 @@ h2 {
     font-family: "DM Mono", monospace;
     font-weight: 500;
     color: #f8f8f8;
-    text-align: center;
     background-color: #764894;
     padding: 60px ;
     border-radius: 40px;
-    margin: 70px;
+    margin: 20px;
     display: flex;
     align-items: center;
 }
 .diseñoycom,.tea {
     font-family: "DM Mono", monospace;
-    font-weight: 400;
     color: #764894;
     text-align: center;
     background-color: #f8f8f8;
@@ -300,19 +354,18 @@ h2 {
     color: #f8f8f8;
     text-align: center;
     background-color: #764894;
-    padding: 60px ;
+    padding: 40px ;
     border-radius: 40px;
-    margin: 70px;
+    margin: 20px;
     display: flex;
     align-items: center;
 }
-.desarrollo, .diseñoutn, .uxui {
+.desarrollo, .diseñoutn, .uxui{
     font-family: "DM Mono", monospace;
-    font-weight: 400;
     color: #764894;
     text-align: center;
     background-color: #f8f8f8;
-    padding: 10px;
+    padding: 20px;
     border-radius: 40px;
     margin: 40px;
     display: flex; 
@@ -322,20 +375,17 @@ h2 {
     width: 38%;
     gap: 10px;
 }
-.cursos h3{
+.cursos h3 {
     font-size: 25px;
 }
 .cursos h5{
     font-size: 17px;
+    padding: 10px;
 }
 .cursos p{
     font-size: 17px;
     font-weight: 500;
-}
-.habilidades {
-    display: flex;
-    padding-bottom: 50px;
-    margin: 25px;
+    padding: 5px;
 }
 .habilidades h2 {
     font-size: 20px;
@@ -346,13 +396,12 @@ h2 {
     background-color: #764894;
     padding: 40px ;
     border-radius: 40px;
-    margin: 40px 70px;
+    margin: 20px;
     display: flex;
     align-items: center;
 }
 .habilidadeslista {
     margin: 40px 70px;
-    align-content: center;
     padding: 50px;
     background-color: #ffffff;
     border-radius: 40px;
@@ -360,6 +409,57 @@ h2 {
     box-shadow: 0 0 5px #8246e969;
 }
 /*Fin de main SOBRE MI*/
+/*MEDIA QUERY SOBRE MI*/
+@media screen and (max-width: 600px) {
+    #sobremi {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+    #contenido-cover {
+        width: 100%;
+        flex-direction: column;
+        padding: 16px;
+    }
+    .contenido-img {
+        width: 100%;
+        border-radius: 16px;
+    }
+    #cover-article {
+        padding: 20px;
+        text-align: center;
+    }
+    #cover-article .hola {
+        font-size: 28px;
+    }
+    #cover-article p {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .aboutme, .formacion, .cursos, .habilidades, .idiomas {
+        flex-direction: column;
+        margin: 20px;
+    }
+    .aboutme h2, .formacion h2, .cursos h2, .habilidades h2 {
+        font-size: 18px;
+        padding: 20px;
+    }
+    .listasaboutme, .tateti, .diseñoycom, .tea, .desarrollo, .diseñoutn, .uxui {
+        width: 100%;
+        margin: 20px 0;
+        padding: 16px;
+    }
+    .listasaboutme h3, .tateti h3, .diseñoycom h3, .tea h3, .cursos h3 {
+        font-size: 22px;
+    }
+    .listasaboutme a, .tateti a, .diseñoycom p, .tea p, .cursos p {
+        font-size: 16px;
+    }
+    .habilidadeslista {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+}
 /*Inicio de SLIDER INFINITO*/
 .slider{
     overflow: hidden;
@@ -390,9 +490,7 @@ h2 {
 /*INICIO de FORMULARIO*/
 .contenedor-formulario {
     display: flex;
-    flex-direction: row;
-    column-gap: 20px;
-    max-width: 100%;
+    column-gap: 50px;
 }
 .pregunta-formulario{
     max-width: 40%;
@@ -401,17 +499,14 @@ h2 {
 .titulo-form{
     font-family:"DM Mono", monospace;
     font-size: 60px;
-    font-weight: 700;
     color: #9747FF;
-    padding: 8px 20px 50px 100px;
-    margin-right: 20px;
-    max-width: 10%;
+    padding: 40px 50px 50px 100px;
+
 }
 .estrellavioleta{
     padding: 10px;
-    margin: 60px;
-    width: 20%;
-    animation: giroinfinito 10s linear infinite;
+    margin: 70px;
+    animation: giroinfinito 15s linear infinite;
 }
 @keyframes giroinfinito {
     from {
@@ -426,8 +521,7 @@ h2 {
     font-size: 40px;
     font-weight: 400;
     color: #9747FF;
-    display: flex;
-    justify-content: flex-start;
+    padding: 20px;
 }
 .zona-formulario{
     background-color: #d0c0f1;
@@ -439,16 +533,14 @@ h2 {
 form{
     display: flex;
     flex-direction:column ;
-    background-color: #b198d338;
+    background-color: #b098d334;
     padding: 50px 60px 30px 60px;
     box-sizing: border-box;
     border-radius: 50px;
 }
 .items-formulario{
     display: flex;
-    flex-direction: row;
     column-gap: 50px;
-    justify-content: space-between;
 }
 .columna-izq-form, .columna-der-form{
     display: flex;
@@ -489,10 +581,6 @@ textarea{
     justify-content: center;
 }
 .submit{
-    font-family:"Signika Negative", sans-serif  ;
-    font-size: 15px;
-    font-weight: 200;
-    line-height: normal;
     color: white;
     background-color:#601095a3;
     display: flex;
@@ -500,7 +588,6 @@ textarea{
     cursor: pointer;
     border-radius: 15px;
     padding: 5px 25px 6px 25px;
-    width: 30%;
 }
 .submit:hover{
     background-color: #8750d0;
@@ -514,6 +601,58 @@ textarea{
     padding: 20px;
 }
 /*FIN de FORMULARIO*/
+/*MEDIA QUERY FORMULARIO*/
+@media screen and (max-width: 600px) {
+    .contenedor-formulario {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    .pregunta-formulario {
+        max-width: 100%;
+    }
+    .titulo-form {
+        font-size: 36px;
+        padding: 20px;
+        text-align: center;
+    }
+    .h3-formulario {
+        font-size: 24px;
+        padding: 10px;
+        text-align: center;
+    }
+    .zona-formulario {
+        padding: 20px;
+        margin: 10px;
+        border-radius: 30px;
+    }
+    form {
+        padding: 20px;
+        border-radius: 30px;
+    }
+    .items-formulario {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .columna-izq-form, .columna-der-form {
+        width: 100%;
+    }
+    input {
+        width: 100%;
+        font-size: 14px;
+    }
+    textarea {
+        font-size: 14px;
+    }
+    .boton-enviar .submit {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .contactoform img {
+        padding: 30px;
+        width: 30px;
+    }
+}
 /*Inicio de grilla de PROYECTOS*/
 .gallery {
     display: flex;
@@ -522,21 +661,14 @@ textarea{
     gap: 60px;
     padding: 20px 50px;
 }
-
 .gallery img {
     height: auto;
     border-radius: 18px;
     transition: transform 0.3s ease-in-out;
 }
-
 .gallery img:hover {
     transform: scale(1.1);
 }
-
-
-
-
-
 /*Inicio de FOOTER*/
 footer {
     background-color: #d0c0f19f;
@@ -546,7 +678,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 135px;
+    padding: 20px 25px ;
 }
 .footerderecho{
     display: flex;
@@ -554,50 +686,11 @@ footer {
     gap: 20px;
 }
 footer p {
-    padding: 5px 20px;
-    font-size: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
 }
 .redessociales a:hover{
     filter: opacity(.6);
 }
 /*Fin de FOOTER*/
 
-
-
-
-
-
-
-
-
-
-
-/*MEDIA QUERY FORMULARIO*/
-
-@media screen and (max-width: 600px) {
-    .contenedor-formulario {
-        flex-direction: column; 
-        align-items: center;
-        gap: 20px;
-    }
-    .titulo-form {
-        font-size: 30px; 
-        padding: 8px 10px; 
-        margin-right: 0;
-        text-align: center;
-        max-width: 100%;
-    }
-    .items-formulario {
-        flex-direction: column; 
-        gap: 20px;
-    }
-    .pregunta-formulario, .zona-formulario, input, textarea, .submit {
-        width: 80%; 
-    }
-    .submit {
-        width: auto; 
-    }
-    .estrellavioleta {
-        flex-direction: center;
-    }
-}
