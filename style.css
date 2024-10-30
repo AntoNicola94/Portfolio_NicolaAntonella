@@ -494,7 +494,6 @@ h2 {
 }
 .pregunta-formulario{
     max-width: 40%;
-    z-index: 10;
 }
 .titulo-form{
     font-family:"DM Mono", monospace;
