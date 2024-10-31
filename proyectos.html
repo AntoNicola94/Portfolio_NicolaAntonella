@@ -16,6 +16,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script>
+        function cambiarDisplay(visibilidadNueva){
+            document.getElementById("galeria").style.display = visibilidadNueva
+        }
+        function mostrarGaleria(){
+            cambiarDisplay('flex')
+        }
+        function ocultarGaleria(){
+            cambiarDisplay('none')
+        }
+</script>
     <title>Mi portfolio Antonella Nicola</title>
 </head>
 <body>
@@ -26,7 +37,7 @@
                 <img src="img/nicolalogo.svg" alt="nicolalogo">
             </a>
         </div>
-    <!-- Checkbox para activar/desactivar el menú -->
+<!-- Checkbox para activar/desactivar el menú -->
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">☰</label>
         <nav>
@@ -43,70 +54,116 @@
             </ul>
         </nav>
     </header>
-<!--Fin del header-->   
+<!--Fin del header-->  
+    <main>
 <!--Botón flotante-->
-    <div class="BotonFlotante">
-        <a href="https://wa.me/+5491160169957" target="_blank"> <img src="img/whatsapp-fill-svgrepo-com.svg" width="30 px" height="30 px" alt="ícono de teléfono"></a>
-        <a href="https://behance.net/antonellanicola1" target="_blank"><img src="img/behance-fill-svgrepo-com.svg" width="30 px" height="30 px" alt="ícono de behance"></a> 
-    </div>
-
+        <div class="BotonFlotante">
+            <a href="https://wa.me/+5491160169957" target="_blank"> <img src="img/whatsapp-fill-svgrepo-com.svg" width="30 px" height="30 px" alt="ícono de teléfono"></a>
+            <a href="https://behance.net/antonellanicola1" target="_blank"><img src="img/behance-fill-svgrepo-com.svg" width="30 px" height="30 px" alt="ícono de behance"></a> 
+        </div>
 <!--INICIO grilla de proyectos -->
-    <section class="margen-contenedor">
-        <div id="proyectos-galeria"> 
-            <a class="item-p" href="https://behance.net/antonellanicola1" target="_blank"><img src="img/pantallasmockupui.png" width="433px" height="337.74px" alt="Miniatura del proyecto #EstadodeÁnimo">
-                <div class="item-p-detalle">
-                    <p>Naranja X</p>
-                    <h6>Proyecto ux/ui</h6>
+        <article class="proyectos">
+            <h4>.Barro alfarería</h4>
+            <p>Lettering para taller de alfarería</p>
+            <p>/Espacio tipográfico 3- UNLa</p>
+        </article>
+        <section class="g-proyectos">
+                <div class="galeria" id="miniaturas">
+                    <a href="#foto-1"><img src="img/mockupafichebarro.png" width="400px" alt="Afiche de taller de alfarería, Barro" onClick="mostrarGaleria()"></a>
+                    <a href="#foto-2"><img src="img/mockuptaller.png" width="400px" alt="Cartelería de taller de alfarería Barro" onClick="mostrarGaleria()"></a>
+                    <a href="#foto-3"><img src="img/mockuptotebarro.png" width="400px" alt="Tote bag barro alfarería" onClick="mostrarGaleria()"></a>
                 </div>
-            </a>
-            <a class="item-p" href="https://behance.net/antonellanicola1" target="_blank"><img src="img/pantallasmockupui.png" width="433px" height="337.74px" alt="Miniatura del proyecto #EstadodeÁnimo">
-                <div class="item-p-detalle">
-                    <p>Naranja X</p>
-                    <h6>Proyecto ux/ui</h6>
-                </div>
-            </a>
-            <a class="item-p" href="https://behance.net/antonellanicola1" target="_blank"><img src="img/pantallasmockupui.png" width="433px" height="337.74px" alt="Miniatura del proyecto #EstadodeÁnimo">
-                <div class="item-p-detalle">
-                    <p>Naranja X</p>
-                    <h6>Proyecto ux/ui</h6>
-                </div>
-            </a>
-        </div>
-    </section>
-    <section class="margen-contenedor">
-        <div> 
-            <a class="item-p" href="https://behance.net/antonellanicola1" target="_blank"><img src="img/pantallasmockupui.png" width="433px" height="337.74px" alt="Miniatura del proyecto #EstadodeÁnimo">
-                <div class="item-p-detalle">
-                    <p>Naranja X</p>
-                    <h6>Proyecto ux/ui</h6>
-                </div>
-            </a>
-            <a class="item-p" href="https://behance.net/antonellanicola1" target="_blank"><img src="img/pantallasmockupui.png" width="433px" height="337.74px" alt="Miniatura del proyecto #EstadodeÁnimo">
-                <div class="item-p-detalle">
-                    <p>Naranja X</p>
-                    <h6>Proyecto ux/ui</h6>
-                </div>
-            </a>
-            <a class="item-p" href="https://behance.net/antonellanicola1" target="_blank"><img src="img/pantallasmockupui.png" width="433px" height="337.74px" alt="Miniatura del proyecto #EstadodeÁnimo">
-                <div class="item-p-detalle">
-                    <p>Naranja X</p>
-                    <h6>Proyecto ux/ui</h6>
-                </div>
-            </a>
-        </div>
-    </section>
-    <section class="spotify">
-        <h2>Mi playlist para diseñar</h2>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5KpQDOvBgF1mRuZIqeyRCW?utm_source=generator&theme=0" 
-        width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-        allowfullscreen loading="lazy"></iframe>
-    </section>
+        </section>
+        <section id="galeria">
+            <div id="fondo-galeria"></div>
+            <ul id="galeria-oculta">
+                    <li class="fraccion-galeria" id="foto-1">
+                            <a href="#" class="primer-ultima-flecha"><img src="img/arrow-left-circle.svg" width="50px" height="50px" alt="Anterior" class="anterior"></a>
+                            <img class="close" src="img/x-circle.svg" alt="Cerrar" width="30px" height="30px" onClick="ocultarGaleria()">
+                            <a href="#foto-2"><img src="img/arrow-rightcircle.svg" width="50px" height="50px" alt="Siguiente"></a>
+                    </li>
+                    <li class="fraccion-galeria" id="foto-2">
+                            <a href="#foto-1"><img src="img/arrow-left-circle.svg" width="50px" height="50px" alt="Anterior"></a>
+                            <img class="close" src="img/x-circle.svg" alt="Cerrar" width="30px" height="30px" onClick="ocultarGaleria()">
+                            <a href="#foto-3"><img src="img/arrow-rightcircle.svg" width="50px" height="50px" alt="Siguiente"></a>
+                    </li>
+                    <li class="fraccion-galeria" id="foto-3">
+                            <a href="#foto-2"><img src="img/arrow-left-circle.svg" width="50px" height="50px" alt="Anterior"></a>
+                            <img class="close" src="img/x-circle.svg" alt="Cerrar" width="30px" height="30px" onClick="ocultarGaleria()">
+                            <a href="#" class="primer-ultima-flecha"><img src="img/arrow-rightcircle.svg" width="50px" height="50px" alt="Siguiente"></a>
+                    </li>
+                </ul>
+        </section>
+        <article class="proyectos">
+            <h4>.Picoteo</h4>
+            <p>Branding para mercado de quesos</p>
+            <p>/Taller de diseño 3- UNLa</p>
+        </article>
+        <section class="g-proyectos-picoteo">
+            <div class="galeria" id="miniaturas2">
+                <a href="#foto-4"><img src="img/mockupafiche_atamaño.png" width="400px" alt="Afiche de taller de alfarería, Barro" onClick="mostrarGaleria()"></a>
+                <a href="#foto-5"><img src="img/postalmockup2_atamaño.png" width="400px" alt="Cartelería de taller de alfarería Barro" onClick="mostrarGaleria()"></a>
+                <a href="#foto-6"><img src="img/mockupbuzo_atamaño.png" width="400px" alt="Tote bag barro alfarería" onClick="mostrarGaleria()"></a>
+            </div>
+        </section>
+        <section id="galeriapicoteo">
+            <div id="fondo-galeriapicoteo"></div>
+                    <ul id="galeria-ocultapicoteo">
+                        <li class="fraccion-galeria-picoteo" id="foto-4">
+                            <a href="#" class="primer-ultima-flecha"><img src="img/arrow-left-circle.svg" width="50px" height="50px" alt="Anterior" class="anterior"></a>
+                            <img class="close" src="img/x-circle.svg" alt="Cerrar" width="30px" height="30px" onClick="ocultarGaleria()">
+                            <a href="#foto-5"><img src="img/arrow-rightcircle.svg" width="50px" height="50px" alt="Siguiente"></a>
+                        </li>
+                        <li class="fraccion-galeria-picoteo" id="foto-5">
+                            <a href="#foto-4"><img src="img/arrow-left-circle.svg" width="50px" height="50px" alt="Anterior"></a>
+                            <img class="close" src="img/x-circle.svg" alt="Cerrar" width="30px" height="30px" onClick="ocultarGaleria()">
+                            <a href="#foto-6"><img src="img/arrow-rightcircle.svg" width="50px" height="50px" alt="Siguiente"></a>
+                        </li>
+                        <li class="fraccion-galeria-picoteo" id="foto-6">
+                            <a href="#foto-5"><img src="img/arrow-left-circle.svg" width="50px" height="50px" alt="Anterior"></a>
+                            <img class="close" src="img/x-circle.svg" alt="Cerrar" width="30px" height="30px" onClick="ocultarGaleria()">
+                            <a href="#" class="primer-ultima-flecha"><img src="img/arrow-rightcircle.svg" width="50px" height="50px" alt="Siguiente"></a>
+                        </li>
+                    </ul>
+        </section>
+        <!--SPOTIFY-->
+        <section class="spotify">
+            <h2>.Mi playlist para diseñar</h2>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5KpQDOvBgF1mRuZIqeyRCW?utm_source=generator&theme=0" 
+            width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+        </section>
 
-	
 
 
 
 
+
+        </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     <!--INICIO FOOTER PORTFOLIO ANTO NICOLA-->
     <footer>
         <div class="footerderecho">

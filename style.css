@@ -720,57 +720,6 @@ footer p {
         margin: 0 15px;
     }
 }
-/*PROYECTOS*/
-.margen-contenedor{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px
-}
-.item-p img {
-	border-radius: 40px;
-	height: auto;
-	object-fit: cover;
-    display: flex; 
-    flex-direction: column;
-    border: 1px solid rgb(132, 17, 209);
-    box-shadow: 0 0 5px #8246e969;
-}
-.item-p {
-	position: relative;
-	display: inline-block;
-	transition: transform 0.4s ease;
-    margin: 50px;
-}
-.item-p-detalle {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	margin: 12px 18px;
-	opacity: 0;
-	transition: transform 0.4s ease;
-}
-.item-p p, .item-p h6 {
-	padding: 9px 20px 6px;
-	border-radius: 20px;
-	width: fit-content;
-	margin: 10px;
-}
-.item-p p {
-	background-color: #601095;
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: 400;
-	letter-spacing: 0.05em;
-}
-.item-p h6 {
-	background: #601095;
-	color:#fff ;
-}
-.item-p:hover, .item-p:hover .item-p-detalle {
-	opacity: 1;
-	transform: scale(1.20);
-}
 /*SPOTIFY*/
 .spotify{
     display: flex;
@@ -785,3 +734,109 @@ footer p {
     color: #9747FF;
     padding: 40px;
 }
+/*GALERIA DE IMAGENES*/
+.proyectos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.proyectos h4{
+    font-family:"DM Mono", monospace;
+    font-size: 40px;
+    color: #9747FF;
+    padding: 40px;
+}
+.proyectos p{
+    font-family:"DM Mono", monospace;
+    font-size: 20px;
+    color: #9747ff95;
+    padding: 10px;
+}
+.galeria {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.g-proyectos img, .g-proyectos-picoteo img{
+    border-radius: 40px;
+    margin: 20px 12px;
+    border: 1px solid rgb(132, 17, 209);
+    box-shadow: 0 0 5px #8246e969;
+}
+.g-proyectos img:hover {
+    transform: scale(1.1);
+}
+.g-proyectos-picoteo img:hover{
+    transform: scale(1.1);
+}
+/* galeria */
+#galeria, #galeriapicoteo{
+    display: none;
+    width: 100%;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: #8850d051;
+}
+/*galeria oculta*/
+#galeria-oculta, #galeria-ocultapicoteo {
+    width: 60%;
+    max-width: 1200px;
+    overflow: hidden;
+    z-index: 20;
+}
+.fraccion-galeria, .fraccion-galeria-picoteo{
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100vh;
+    justify-content: space-around;
+}
+.fraccion-galeria img, .fraccion-galeria-picoteo img {
+    transition: filter 0.4s ease, transform 0.5s ease;
+    cursor: pointer;
+}
+.fraccion-galeria a:first-child {
+    margin-right: 420px;/*margen de flecha*/
+}
+.fraccion-galeria a:last-child {
+    margin-left: 420px;/*margen de flecha*/
+}
+.fraccion-galeria-picoteo a:first-child {
+    margin-right: 420px;/*margen de flecha*/
+}
+.fraccion-galeria-picoteo a:last-child {
+    margin-left: 420px;/*margen de flecha*/
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 2%;
+}
+.primer-ultima-flecha {
+    visibility: hidden;
+}
+/* imágenes galeria oculta */
+#foto-1 {
+    background-image: url("img/mockupbarroalfareria_atamaño.png");/*cambiarle la medida*/
+}
+#foto-2 {
+    background-image: url("img/mockuptaller_atamaño.png");
+}
+#foto-3 {
+    background-image: url("img/mockuptotebag_atamaño.png");
+}
+#foto-4 {
+    background-image: url("img/mockupafiche_atamaño.png");
+}
+#foto-5 {
+    background-image: url("img/postalmockup2_atamaño.png"); 
+}
+#foto-6 {
+    background-image: url("img/mockupbuzo_atamaño.png");
+}
+
