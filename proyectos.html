@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--java para Galeria-->
     <script>
         function cambiarDisplay(visibilidadNueva){
             document.getElementById("galeria").style.display = visibilidadNueva
@@ -26,7 +27,7 @@
         function ocultarGaleria(){
             cambiarDisplay('none')
         }
-</script>
+    </script>
     <title>Mi portfolio Antonella Nicola</title>
 </head>
 <body>
@@ -56,12 +57,19 @@
     </header>
 <!--Fin del header-->  
     <main>
+        <section class="proyectostitulo">
+            <h2>.Proyectos destacados</h2>
+        </section>
+        <div class="estrelladivproyectos">
+            <img src="img/estrella.svg" alt="estrellavioleta" class="estrellavioletasaludo">
+        </div>
 <!--Botón flotante-->
         <div class="BotonFlotante">
             <a href="https://wa.me/+5491160169957" target="_blank"> <img src="img/whatsapp-fill-svgrepo-com.svg" width="30 px" height="30 px" alt="ícono de teléfono"></a>
             <a href="https://behance.net/antonellanicola1" target="_blank"><img src="img/behance-fill-svgrepo-com.svg" width="30 px" height="30 px" alt="ícono de behance"></a> 
         </div>
 <!--INICIO grilla de proyectos -->
+        <section class="contenedorproyectos">
         <article class="proyectos">
             <h4>.Barro alfarería</h4>
             <p>Lettering para taller de alfarería</p>
@@ -116,12 +124,17 @@
         </article>
         <section class="g-proyectos-picoteo">
             <div class="galeria" id="miniaturas2">
-                <a href="#foto-4"><img src="img/mockupafiche_atamaño.png" width="400px" alt="Afiche de taller de alfarería, Barro" onClick="mostrarGaleria()"></a>
-                <a href="#foto-5"><img src="img/postalmockup2_atamaño.png" width="400px" alt="Cartelería de taller de alfarería Barro" onClick="mostrarGaleria()"></a>
-                <a href="#foto-6"><img src="img/mockupbuzo_atamaño.png" width="400px" alt="Tote bag barro alfarería" onClick="mostrarGaleria()"></a>
+                <a href="#foto-4"><img src="img/mockupafichepicoteopng.png" width="400px" alt="Afiche de taller de alfarería, Barro" onClick="mostrarGaleria()"></a>
+                <a href="#foto-5"><img src="img/postalmockup2.png" width="400px" alt="Cartelería de taller de alfarería Barro" onClick="mostrarGaleria()"></a>
+                <a href="#foto-6"><img src="img/mockupbuzo.png" width="400px" alt="Tote bag barro alfarería" onClick="mostrarGaleria()"></a>
             </div>
         </section>
-
+        <div class="otros-proyectos">
+            <a href="https://www.behance.net/antonellanicola1" target="_blank" class="btn-behance">Conocé otros proyectos</a>
+        </div>
+        <div class="estrelladiv">
+            <img src="img/estrella.svg" alt="estrellavioleta" class="estrellavioletasaludo">
+        </div>
         <!--SPOTIFY-->
         <section class="spotify">
             <h2>.Mi playlist para diseñar</h2>
@@ -129,6 +142,7 @@
             width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             allowfullscreen loading="lazy"></iframe>
         </section>
+    </section>
         </main>
 
 
