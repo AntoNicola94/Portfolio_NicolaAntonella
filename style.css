@@ -74,6 +74,7 @@ nav ul li {
     }
     #menu-toggle:checked + .menu-icon + nav .nav-links {
         display: flex;
+        z-index: 10;
     }
     .nav-links li a {
         display: block;
@@ -167,6 +168,11 @@ nav ul li {
     .estrellavioletasaludo {
         padding: 10px;
         animation: giroinfinito 15s linear infinite;
+    }
+    .afterdelay .div3 {
+        width: 80%;
+        margin: 10px;
+        padding: 10px;
     }
 }
 /*Inicio de main SOBRE MI*/
